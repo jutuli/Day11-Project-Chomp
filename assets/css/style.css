@@ -30,42 +30,74 @@ html {
   height: 625px;
 }
 
-img {
+/* img {
   max-width: 100%;
-}
+} */
 
-p {
+p,
+h1,
+h2 {
   font-size: 1.6rem;
   text-align: center;
 }
+
+h2 {
+  font-family: var(--font-primary);
+  font-weight: 900;
+  color: white;
+  padding: 4vh;
+  background-color: var(--primary-color);
+}
+
+/*  === Header ==== */
+
+header {
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+header a {
+  text-decoration: none;
+}
+
+nav {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* === Hero Section === */
 
 h1 {
   font-family: var(--font-secondary);
-  text-align: center;
-  font-size: 1.6rem;
+  color: black;
 }
 
-.hero {
-  background: url(../img/dog.png) no-repeat center/cover;
+/* .hero {
+  background: url(../img/dog.png) no-repeat center/cover; 
   width: 100%;
+  height: 100%;
+} */
+
+.hero img {
+  width: 100vw;
   height: 100vh;
+  object-fit: cover;
 }
 
 .hero h2 {
   color: var(--primary-color);
   text-align: right;
   background-color: transparent;
-}
-
-h2 {
-  font-family: var(--font-primary);
-  font-weight: 900;
-  font-size: 1.6rem;
-  color: white;
-  padding: 4vh;
-  text-align: center;
-  background-color: var(--primary-color);
+  position: absolute;
+  right: 0;
+  margin-top: 5vh;
+  text-align: right;
+  width: 100vw;
 }
 
 /* === How It Works === */
@@ -77,6 +109,8 @@ h2 {
 .step {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2.5vh;
   padding: 2.5vh;
 }
@@ -183,7 +217,18 @@ button {
 /* === Media Queries === */
 
 /* Medium Devices */
-@media (min-width: 601px) and (max-width: 900px) {
+@media screen and (min-width: 601px) {
+  .step {
+    flex-direction: row;
+    justify-content: start;
+    align-items: baseline;
+    margin: 0 10vw;
+  }
+
+  .step p {
+    text-align: left;
+  }
+
   .menu img {
     height: 42vh;
   }
@@ -195,5 +240,46 @@ button {
   .dog-image,
   .food-description {
     flex: 1;
+  }
+}
+
+/* Large Devices */
+@media screen and (min-width: 901px) {
+  header {
+    position: static;
+  }
+
+  .hero {
+    display: flex;
+    background-color: var(--primary-color);
+  }
+
+  .hero h2 {
+    position: static;
+    color: white;
+  }
+
+  .hero img {
+    width: 100vw;
+  }
+  .wrapper {
+    width: 100%;
+  }
+
+  h2 {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  .wrapper {
+    display: flex;
+  }
+
+  .step {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
   }
 }
