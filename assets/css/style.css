@@ -27,7 +27,7 @@
 html {
   font-size: 10px;
   font-family: "Nunito", Verdana, Geneva, Tahoma, sans-serif;
-  height: 625px;
+  overflow-x: hidden;
 }
 
 /* img {
@@ -231,6 +231,7 @@ button {
 
   .menu img {
     height: 42vh;
+    width: 50%;
   }
 
   .menu-images {
