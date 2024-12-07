@@ -1,4 +1,4 @@
-/* == Main Styling == */
+/* ========================== General Styling ========================== */
 
 @font-face {
   font-family: "Nunito";
@@ -49,7 +49,7 @@ h2 {
   background-color: var(--primary-color);
 }
 
-/*  === Header ==== */
+/*  =========================== Header ============================ */
 
 header {
   height: 10vh;
@@ -70,7 +70,7 @@ nav {
   align-items: center;
 }
 
-/* === Hero Section === */
+/* =========================== Hero Section =========================== */
 
 h1 {
   font-family: var(--font-secondary);
@@ -116,7 +116,7 @@ h3 {
   font-weight: 700;
 }
 
-/* === Whats On The Menu === */
+/* =========================== Whats On The Menu =========================== */
 
 .menu {
   width: 100%;
@@ -167,7 +167,7 @@ h3 {
   padding: 3vh 3vh 6vh 3vh;
 }
 
-/* === Footer === */
+/* =========================== Footer =========================== */
 
 footer {
   height: 63vh;
@@ -208,9 +208,9 @@ button {
   justify-content: space-evenly;
 }
 
-/* === Media Queries === */
+/* =========================== Media Queries =========================== */
 
-/* Medium Devices */
+/* ======================= Medium Devices ======================== */
 @media screen and (min-width: 601px) {
   .step {
     flex-direction: row;
@@ -238,7 +238,7 @@ button {
   }
 }
 
-/* Large Devices */
+/* ====================== Large Devices =====================*/
 @media screen and (min-width: 901px) {
   header {
     position: static;
@@ -354,5 +354,18 @@ button {
   .bottom-bar > p {
     padding: 0;
     margin-right: 2.4rem;
+  }
+}
+
+/* ====================== Extra-Large Devices =====================*/
+@media screen and (min-width: 1201px) {
+  .wrapper,
+  .menu-wrapper {
+    padding: 0 10vw;
+    margin-bottom: 3vh;
+  }
+
+  .step {
+    padding: 4vw;
   }
 }
